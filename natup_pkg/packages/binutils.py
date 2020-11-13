@@ -18,7 +18,7 @@ class v_2_29_1(natup_pkg.VersionCreator):
 
         build_deps = {glibc_version_header_package, make_pkg, binutils_pkg, gcc_pkg}
 
-        configure_args = ["--enable-gold=true", "--enable-ld=false", "--enable-plugins", "--disable-gdb"]
+        configure_args = ["--enable-gold=yes", "--enable-ld=no", "--enable-plugins", "--disable-gdb"]
 
         glibc_ver = "2.13"
         if env.is_bootstrap_env:
