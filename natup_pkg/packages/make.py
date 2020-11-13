@@ -11,7 +11,7 @@ class v_4_2_1(natup_pkg.VersionCreator):
     def init_impl(self, env: natup_pkg.Environment):
         glibc_version_header_package = env.packages["glibc_version_header"].versions["0.1"]
         make_pkg = env.packages["make"].versions["4.2.1"]
-        binutils_pkg = env.packages["binutils"].versions["2.29.1"]
+        binutils_pkg = env.packages["binutils"].versions["2.35.1"]
         gcc_pkg = env.packages["gcc"].versions["7.2.0"]
 
         build_deps = {glibc_version_header_package, make_pkg, binutils_pkg, gcc_pkg}

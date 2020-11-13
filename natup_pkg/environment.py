@@ -52,7 +52,7 @@ class Environment:
         self.packages[pkg.name] = pkg
 
     def get_concurrent_build_count(self):
-        return 6
+        return 9
 
     def get_tmp_filename(self) -> str:
         self.next_tmp_file += 1
@@ -159,7 +159,7 @@ class Environment:
     def get_bootstrap_packages(self) -> typing.List["natup_pkg.PackageVersion"]:
         glibc_header_package = self.packages["glibc_version_header"].versions["0.1"]
         make_pkg = self.packages["make"].versions["4.2.1"]
-        binutils_pkg = self.packages["binutils"].versions["2.29.1"]
+        binutils_pkg = self.packages["binutils"].versions["2.35.1"]
         gcc_pkg = self.packages["gcc"].versions["7.2.0"]
 
         return [glibc_header_package, make_pkg, binutils_pkg, gcc_pkg]

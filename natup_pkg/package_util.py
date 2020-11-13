@@ -9,8 +9,11 @@ import natup_pkg
 # the repos for our packages, and dump the timstamps into a timestamps.txt file so we can recreate them no matter how
 # much copying or what have you has been done to the data since. (git, notably doesn't preserve file creation time)
 def patch_gnu_project_tarball_timestamps(_: "natup_pkg.PackageVersion", __: "natup_pkg.Environment", src_dir: str):
-    with open(src_dir + "/timestamps.txt", "rb") as f:
-        lines = [x.strip() for x in f.readlines()]
+    try:
+        with open(src_dir + "/timestamps.txt", "rb") as f:
+            lines = [x.strip() for x in f.readlines()]
+    except:
+        return
 
     for i in range(len(lines) // 2):
         filename = lines[i * 2 + 0]
