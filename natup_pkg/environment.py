@@ -52,7 +52,7 @@ class Environment:
         self.packages[pkg.name] = pkg
 
     def get_concurrent_build_count(self):
-        return 9
+        return 96
 
     def get_tmp_filename(self) -> str:
         self.next_tmp_file += 1

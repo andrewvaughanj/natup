@@ -28,7 +28,7 @@ class v_7_2_0(natup_pkg.VersionCreator):
         extra_cflags=["-fPIC", "-fPIE", "-fuse-ld=gold"]
         extra_cxxflags=["-fPIC", "-fPIE", "-fuse-ld=gold"]
 
-        glibc_ver = "2.13"
+        glibc_ver = "2.5"
         if env.is_bootstrap_env:
             glibc_ver = None
         else:

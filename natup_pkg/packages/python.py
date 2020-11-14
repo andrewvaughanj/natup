@@ -20,7 +20,7 @@ class v_3_6_4(natup_pkg.VersionCreator):
 
         def build(package: natup_pkg.PackageVersion, env: natup_pkg.Environment, install_dir: str):
             glibc_version_header_dir = glibc_version_header_package.get_install_dir(env)
-            glibc_version_header = glibc_version_header_dir + "/force_link_glibc_2.13.h"
+            glibc_version_header = glibc_version_header_dir + "/x64/force_link_glibc_2.5.h"
             include_flag = "-include " + glibc_version_header
 
             gcc_path = gcc_pkg.get_path_var(env) + "/gcc"
@@ -65,7 +65,7 @@ class v_3_6_4(natup_pkg.VersionCreator):
 
             autotools_build = natup_pkg.package_util.get_autotools_build_func(
                 glibc_version_header_package,
-                "2.13",
+                "2.5",
                 # pyinstaller doesn't work with static build
                 extra_configure_args=["--enable-shared", "--enable-optimization", "--with-pymalloc"],
                 extra_ldflags=extra_ldflags,

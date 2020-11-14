@@ -16,7 +16,7 @@ class v_4_2_1(natup_pkg.VersionCreator):
 
         build_deps = {glibc_version_header_package, make_pkg, binutils_pkg, gcc_pkg}
 
-        glibc_ver = "2.13"
+        glibc_ver = "2.5"
         if env.is_bootstrap_env:
             glibc_ver = None
 

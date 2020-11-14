@@ -5,8 +5,8 @@ import shutil
 class v_0_1(natup_pkg.VersionCreator):
     def __init__(self, env: natup_pkg.Environment, name: str):
         version_str = "0.1"
-        archive = "https://github.com/wheybags/glibc_version_header/archive/0.1.tar.gz"
-        archive_hash = "57db74f933b7a9ea5c653498640431ce0e52aaef190d6bb586711ec4f8aa2b9e"
+        archive = "https://github.com/wheybags/glibc_version_header/tarball/master"
+        archive_hash = "51efb86306205c12dc9a976390e10d4e438f131527cf1fbb6dd19b3e5db3fbff"
         super().__init__(env, name, version_str, archive, archive_hash)
 
     def init_impl(self, env: natup_pkg.Environment):

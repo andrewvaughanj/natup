@@ -20,7 +20,7 @@ class v_2_29_1(natup_pkg.VersionCreator):
 
         configure_args = ["--enable-gold=yes", "--enable-ld=no", "--enable-plugins", "--disable-gdb"]
 
-        glibc_ver = "2.13"
+        glibc_ver = "2.5"
         if env.is_bootstrap_env:
             glibc_ver = None
 
