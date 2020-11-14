@@ -36,7 +36,7 @@ class v_7_2_0(natup_pkg.VersionCreator):
             # quite cut it.
 
             glibc_version_header_dir = glibc_version_header_package.get_install_dir(env)
-            glibc_version_header = glibc_version_header_dir + "/force_link_glibc_" + glibc_ver + ".h"
+            glibc_version_header = glibc_version_header_dir + "/x64/force_link_glibc_" + glibc_ver + ".h"
             include_flag = "-include " + glibc_version_header
 
             # sets flags for "target" libs, like libstdc++ (all the libs in the source tree, as far as I can tell)

@@ -62,7 +62,7 @@ def get_autotools_build_func(glibc_version_header_package: "natup_pkg.PackageVer
         glibc_version_header_dir = glibc_version_header_package.get_install_dir(env)
 
         if glibc_version:
-            glibc_version_header = glibc_version_header_dir + "/force_link_glibc_" + glibc_version + ".h"
+            glibc_version_header = glibc_version_header_dir + "/x64/force_link_glibc_" + glibc_version + ".h"
             include_flag = "-include " + glibc_version_header
         else:
             include_flag = ""
